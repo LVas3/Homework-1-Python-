@@ -1,11 +1,11 @@
 while True:
-    num_str = input("Введите число: ")
-    if num_str.lower() == "exit":
+    number = input("Введите число: ")
+    if number == "exit" or number == "Exit" or number == "EXIT"  :
         print("Выход из программы...")
         break
-
-    if num_str.lstrip('-').isdigit():
-        length = len(num_str.lstrip('-'))
-        print(f"В этом числе {length} цифры.")
+    elif number.isdigit():
+        print(f"В этом числе {len(number)} цифры.")
+    elif number.lstrip('-').isdigit():
+        print(f"В этом числе {len(number.lstrip('-'))} цифры.")
     else:
-        print("Ошибка: данные не являются числом.")
+        print("данные не являются числом.")
