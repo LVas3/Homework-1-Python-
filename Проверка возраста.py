@@ -1,12 +1,11 @@
-try:
-    age_input = input("Введите ваш возраст: ")
-    age = int(age_input)
-    if age < 0:
-        print("Ошибка: возраст не может быть отрицательным!")
-    else:
-        if age >= 18:
-            print("Вы совершеннолетний.")
-        else:
-            print("Вы несовершеннолетний.")
-except ValueError:
-    print("Ошибка: введено не число!")
+agefromuser = input("Введите ваш возраст: ")
+if agefromuser.isdigit():
+    age=int(agefromuser)
+    if age >= 18:
+            print("Вы совершеннолетний")
+    elif age < 0:
+            print("Ошибка: возраст не может быть отрицательным!")
+    elif age > 0 & age<18:
+            print("Вы несовершеннолетний")
+else:
+        print("введено не число!")
